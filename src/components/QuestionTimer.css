@@ -1,0 +1,20 @@
+/* High-contrast digital timer override */
+.timer.digital {
+  background: #fff;
+  border: 2px solid #eee;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+}
+.timer.digital .icon { font-size: 1.2rem; color: #111; }
+.timer.digital .digits {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px;
+}
+.timer.digital.green .digits { color: #0b7a0b; }
+.timer.digital.orange .digits { color: #d97a00; }
+.timer.digital.red .digits { color: #d00000; }

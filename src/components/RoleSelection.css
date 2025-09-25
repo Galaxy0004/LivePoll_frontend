@@ -1,0 +1,88 @@
+.role-selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .role-selection-card {
+    max-width: 900px;
+    text-align: center;
+  }
+  
+  .role-selection-card .header {
+    margin-bottom: 40px;
+  }
+  
+  .role-selection-card h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .role-selection-card .header p {
+    font-size: 1.2rem;
+    color: var(--text);
+    opacity: 0.8;
+  }
+  
+  .role-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .role-option {
+    padding: 40px 30px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .role-option:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .role-option .icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .role-option h2 {
+    color: var(--primary);
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+  
+  .role-option p {
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .select-btn {
+    background: var(--primary);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .role-options {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .role-selection-card h1 {
+      font-size: 2rem;
+    }
+  }

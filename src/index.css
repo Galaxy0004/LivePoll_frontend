@@ -1,0 +1,159 @@
+:root {
+    --primary: #7769DA;
+    --primary-dark: #6767DO;
+    --accent: #AFODCE;
+    --background: #F2F2F2;
+    --text: #373737;
+    --light-gray: #E0E0E0;
+    --white: #FFFFFF;
+    --success: #4CAF50;
+    --error: #f44336;
+    --warning: #ff9800;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid var(--light-gray);
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .btn-primary {
+    background: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover:not(:disabled) {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background: var(--light-gray);
+    color: var(--text);
+  }
+  
+  .btn-secondary:hover:not(:disabled) {
+    background: #d0d0d0;
+  }
+  
+  .btn-danger {
+    background: var(--error);
+    color: white;
+  }
+  
+  .btn-danger:hover:not(:disabled) {
+    background: #d32f2f;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+  
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .error-message {
+    background: #ffebee;
+    color: var(--error);
+    margin: 10px 0;
+    border-left: 4px solid var(--error);
+  }
+  
+  .success-message {
+    background: #e8f5e8;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+    border-left: 4px solid var(--success);
+  }
+
+  /* Ask Question (QuestionForm) submit button: keep color, only zoom slightly */
+  .question-form button.btn.btn-primary {
+    transition: transform 0.15s ease;
+  }
+  .question-form button.btn.btn-primary:hover:not(:disabled) {
+    background: var(--primary) !important; /* keep same color */
+    transform: scale(1.03);
+  }
+
+  /* QuestionForm cancel button: keep color, only zoom slightly */
+  .question-form .btn.btn-secondary {
+    transition: transform 0.15s ease;
+  }
+  .question-form .btn.btn-secondary:hover:not(:disabled) {
+    background: var(--light-gray);
+    transform: scale(1.03);
+  }
+
+  /* QuestionForm Add Option button: keep color, only zoom slightly */
+  .question-form .add-option-btn:hover:not(:disabled) {
+    background: var(--light-gray);
+    transform: scale(1.03);
+    transition: transform 0.15s ease;
+  }

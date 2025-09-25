@@ -1,0 +1,81 @@
+.participants-card h3 {
+    color: var(--primary);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 10px;
+  }
+  
+  .participants-section {
+    margin-bottom: 20px;
+  }
+  
+  .participants-section h4 {
+    color: var(--text);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .participant-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid transparent;
+  }
+  
+  .participant-item.teacher {
+    border-left-color: var(--primary);
+  }
+  
+  .participant-item.student {
+    border-left-color: var(--accent);
+  }
+  
+  .participant-name {
+    font-weight: 500;
+  }
+  
+  .participant-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .participant-status {
+    font-size: 0.8rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #e8f5e8;
+    color: var(--success);
+  }
+  
+  .remove-btn {
+    background: var(--error);
+    color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .remove-btn:hover {
+    background: #d32f2f;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 20px;
+    color: var(--text);
+    opacity: 0.5;
+  }

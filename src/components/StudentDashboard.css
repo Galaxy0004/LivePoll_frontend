@@ -1,0 +1,132 @@
+.student-dashboard {
+    min-height: 100vh;
+    background: var(--background);
+  }
+  
+  .dashboard-header {
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+  }
+  
+  .student-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  
+  .welcome-text {
+    color: var(--text);
+    font-size: 1.1rem;
+  }
+  
+  .status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .status.active {
+    background: #e8f5e8;
+    color: var(--success);
+  }
+  
+  .status.waiting {
+    background: #fff3cd;
+    color: var(--warning);
+  }
+  
+  .student-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .waiting-section {
+    margin-top: 50px;
+  }
+  
+  .waiting-card {
+    text-align: center;
+    padding: 50px 30px;
+  }
+  
+  .waiting-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+  }
+  
+  .waiting-card h2 {
+    color: var(--primary);
+    margin-bottom: 16px;
+    font-size: 1.8rem;
+  }
+  
+  .waiting-card p {
+    color: var(--text);
+    opacity: 0.8;
+    font-size: 1.1rem;
+  }
+  
+  .results-section {
+    margin-top: 30px;
+  }
+  
+  .your-vote {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .your-vote h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+  }
+  
+  .vote-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .vote-option {
+    background: #e8f5e8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--success);
+    font-weight: bold;
+  }
+  
+  .vote-check {
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .student-info {
+      align-items: center;
+    }
+  }

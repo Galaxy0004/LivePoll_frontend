@@ -1,0 +1,204 @@
+.teacher-dashboard {
+    min-height: 100vh;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dashboard-header {
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-content h1 {
+    color: var(--primary);
+    font-size: 2rem;
+  }
+  
+  .stats {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.7;
+    margin-bottom: 4px;
+  }
+  
+  .stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .stat-value.active {
+    color: var(--success);
+  }
+  
+  .stat-value.inactive {
+    color: var(--warning);
+  }
+  
+  .dashboard-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    /* fill remaining height below header for vertical centering */
+    width: 100%;
+    flex: 1;
+    /* center grid content vertically when there are few rows (e.g., welcome only) */
+    align-content: center;
+    justify-content: center;
+  }
+
+  .welcome-section {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* center within content area */
+    height: 100%;
+  }
+
+  .welcome-card {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .welcome-card p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: var(--text);
+    opacity: 0.8;
+  }
+
+  /* Single column mode when only welcome section is visible */
+  .dashboard-content.single-col {
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+  }
+  .dashboard-content.single-col .main-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Secondary buttons in teacher dashboard (e.g., View Poll History): keep color, only zoom */
+  .teacher-dashboard .btn.btn-secondary {
+    transition: transform 0.15s ease;
+  }
+  .teacher-dashboard .btn.btn-secondary:hover:not(:disabled) {
+    background: var(--light-gray);
+    transform: scale(1.03);
+  }
+  
+  .ask-question-btn {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    transition: transform 0.15s ease;
+  }
+  /* Keep primary color; only zoom a bit on hover for these specific buttons */
+  .btn.btn-primary.ask-question-btn:hover:not(:disabled),
+  .btn.btn-primary.new-question-btn:hover:not(:disabled) {
+    background: var(--primary);
+    transform: scale(1.03);
+  }
+  .new-question-btn { transition: transform 0.15s ease; }
+  
+  .active-question-section {
+    grid-column: 1 / -1;
+  }
+  
+  .question-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary);
+  }
+  
+  .question-card h3 {
+    color: var(--text);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .question-options {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .option-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: var(--white);
+    border-radius: 6px;
+    border: 1px solid var(--light-gray);
+  }
+  
+  .option-letter {
+    background: var(--primary);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .option-text {
+    font-size: 1rem;
+  }
+  
+  .results-section {
+    grid-column: 1 / -1;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .header-content {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    
+    .stats {
+      gap: 20px;
+    }
+  }

@@ -1,0 +1,58 @@
+.error-modal-overlay {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.3s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .error-modal {
+    min-width: 300px;
+    border-left: 4px solid var(--error);
+  }
+  
+  .error-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .error-icon {
+    font-size: 1.2rem;
+  }
+  
+  .error-header h3 {
+    color: var(--error);
+    margin: 0;
+    flex: 1;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    opacity: 0.5;
+  }
+  
+  .close-btn:hover {
+    opacity: 1;
+  }
+  
+  .error-message {
+    color: var(--text);
+    line-height: 1.4;
+  }

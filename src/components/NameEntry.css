@@ -1,0 +1,45 @@
+.name-entry-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .name-entry-card {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .name-entry-card .header {
+    margin-bottom: 40px;
+  }
+  
+  .name-entry-card h1 {
+    color: var(--primary);
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+  
+  .name-entry-card .header p {
+    font-size: 1.1rem;
+    color: var(--text);
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+  
+  .name-form {
+    text-align: left;
+  }
+  
+  .continue-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    transition: transform 0.15s ease;
+  }
+  .continue-btn:hover:not(:disabled) {
+    transform: scale(1.03);
+  }

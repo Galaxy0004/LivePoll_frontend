@@ -1,0 +1,30 @@
+.chat-widget{position:fixed;right:24px;bottom:24px;z-index:1000}
+.chat-toggle{width:48px;height:48px;border-radius:50%;background:#5b4bfa;color:#fff;border:none;box-shadow:0 6px 16px rgba(0,0,0,.2);display:flex;align-items:center;justify-content:center;cursor:pointer}
+.chat-toggle:hover{filter:brightness(1.05)}
+
+.chat-panel{position:absolute;right:0;bottom:64px;width:340px;max-height:420px;display:flex;flex-direction:column;box-shadow:0 10px 24px rgba(0,0,0,.15)}
+.chat-tabs{display:flex;border-bottom:1px solid #e5e7eb}
+.tab{flex:1;padding:10px 12px;background:#fff;border:none;border-right:1px solid #e5e7eb;font-weight:600;cursor:pointer}
+.tab:last-child{border-right:none}
+.tab.active{color:#5b4bfa}
+
+.chat-area{display:flex;flex-direction:column;height:100%}
+.messages{padding:12px;height:280px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.msg{display:flex;flex-direction:column;max-width:80%}
+.msg .from{font-size:.75rem;opacity:.6;margin-bottom:2px}
+.msg .bubble{padding:8px 10px;border-radius:10px;background:#f1f5f9}
+.msg.me{margin-left:auto;align-items:flex-end}
+.msg.me .bubble{background:#5b4bfa;color:#fff}
+.msg.system .bubble{background:#eef2ff;color:#4b5563}
+
+.composer{display:flex;gap:8px;border-top:1px solid #e5e7eb;padding:8px}
+.composer input{flex:1;border:1px solid #e5e7eb;border-radius:8px;padding:8px}
+.send-btn{background:#5b4bfa;color:#fff;border:none;border-radius:8px;padding:8px 12px;cursor:pointer}
+
+.participants-area{display:flex;flex-direction:column;height:100%}
+.participants-head{padding:8px 12px;border-bottom:1px solid #e5e7eb;font-weight:600}
+.participants-list{padding:8px 12px;max-height:330px;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.participants-list .row{display:flex;justify-content:space-between;align-items:center;padding:8px;border:1px solid #e5e7eb;border-radius:6px;background:#fafafa}
+.participants-list .kick{background:transparent;border:none;color:#ef4444;cursor:pointer}
+
+@media (max-width:600px){.chat-panel{width:92vw}}
